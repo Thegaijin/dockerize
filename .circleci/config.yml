@@ -33,7 +33,7 @@ jobs:
           command: |
             . venv/bin/activate
             cd yummy_api/
-            nosetests --with-coverage --cover-package=app
+            pytest
       - store_artifacts:
           path: test-reports/
           destination: tr1
@@ -62,7 +62,6 @@ jobs:
           command: |
             pwd
             ls -la
-            bash k8s.sh
     working_directory: ~/project
 
 workflows:
