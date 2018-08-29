@@ -7,7 +7,7 @@ default: &defaults
     - image: 'circleci/postgres:9.6.5-alpine-ram'
       environment:
         POSTGRES_USER: circleci
-        POSTGRES_DB: test_db
+        POSTGRES_DB: test_yummy
         POSTGRES_PASSWORD: ''
   working_directory: ~/project
 
