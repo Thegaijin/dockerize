@@ -24,6 +24,9 @@ jobs:
           key: 'deps1-{{ .Branch }}-{{ checksum "yummy_api/requirements.txt" }}'
       - run:
           command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            ls -la
             cd yummy_api/
             pip install -r requirements.txt
       - run:
