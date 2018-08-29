@@ -31,6 +31,7 @@ jobs:
             pip install -r requirements.txt
       - run:
           command: |
+            . venv/bin/activate
             cd yummy_api/
             nosetests --with-coverage --cover-package=app
       - store_artifacts:
